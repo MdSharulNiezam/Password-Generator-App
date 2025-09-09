@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
       generateButton.disabled = true;
       errorMessage.textContent = !isAnyChecked
         ? "Please select at least one character type"
-        : "Password length must be at least 5";
+        : "Character length must be at least 5";
       errorMessage.classList.add('visible');
 
       // Reset display
