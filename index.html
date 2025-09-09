@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Password Generator</h1>
+    
+    <div class="password-display">
+      <span class="password-text"><span class="password-placeholder">P4$5W0rD!</span></span>
+      <div>
+        <span class="copied-text">COPIED</span>
+        <button class="copy-btn">📋</button>
+      </div>
+    </div>
+    
+    <form id="password-form" class="options-container">
+      <div class="character-length">
+        <div class="character-header">
+          <span class="character-title">Character Length</span>
+          <span class="character-count">0</span>
+        </div>
+        <div class="slider-container">
+          <input type="range" min="0" max="20" value="0" class="slider" id="length-slider">
+        </div>
+      </div>
+      
+      <div class="checkboxes">
+        <label class="checkbox-item">
+          <input type="checkbox" id="uppercase">
+          <span>Include Uppercase Letters</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="lowercase">
+          <span>Include Lowercase Letters</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="numbers">
+          <span>Include Numbers</span>
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" id="symbols">
+          <span>Include Symbols</span>
+        </label>
+      </div>
+      
+      <div class="strength-meter">
+        <span class="strength-title">STRENGTH</span>
+        <div class="strength-value">
+          <span class="strength-label" id="strength-text">MEDIUM</span>
+          <div class="strength-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      
+      <button type="submit" class="generate-btn" id="generate-btn">
+        GENERATE
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      
+      <div class="error-message" id="error-message">Please select at least one character type</div>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
